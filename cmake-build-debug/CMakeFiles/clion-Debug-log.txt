@@ -1,0 +1,1 @@
+D:\Software\JetBrains\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=D:/Software/JetBrains/CLion/bin/ninja/win/x64/ninja.exe -G Ninja -S C:\Users\Wangs\Desktop\基于数据融合的项目进度管控系统设计与实现\Meeo-collab\外部代码库连接\project1111 -B C:\Users\Wangs\Desktop\基于数据融合的项目进度管控系统设计与实现\Meeo-collab\外部代码库连接\project1111\cmake-build-debug
