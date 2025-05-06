@@ -33,4 +33,5 @@ void printBurndownChart(const std::vector<int>& remainingTasks) {
                   << std::string(remainingTasks[day] / 2, '#') << "] "
                   << remainingTasks[day] << " tasks\n";
     }
+
 }

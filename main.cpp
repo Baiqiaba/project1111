@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 #include "BornDownChart.cpp"
-
 using namespace std;
 
 int main() {
@@ -10,5 +9,6 @@ int main() {
 
     std::vector<int> burndown = simulateBurndown(totalTasks, totalDays, randomBurn);
     printBurndownChart(burndown);
+
     return 0;
 }
