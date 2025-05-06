@@ -1,11 +1,14 @@
 #include <bits/stdc++.h>
-#include "mytest.cpp"
-#include "New666Test.cpp"
+#include "BornDownChart.cpp"
+
 using namespace std;
+
 int main() {
-    cout_a();
-    int x;
-    cin>>x;
-    new666(x);
+    int totalTasks = 100;
+    int totalDays = 20;
+    bool randomBurn = true;
+
+    std::vector<int> burndown = simulateBurndown(totalTasks, totalDays, randomBurn);
+    printBurndownChart(burndown);
     return 0;
 }
