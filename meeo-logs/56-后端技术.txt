@@ -1,0 +1,7 @@
+SpringBoot 2.7.6
+
+Spring Boot DevTools
+Lombok
+MySQL Driver
+Spring Web
+Spring Data JPA
