@@ -1,0 +1,45 @@
+// 20250516
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    int a[10000];
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+    int currLen=1; //存取当前子串的长度
+    int maxLen=1; //初始化擂主
+
+    for(int i=1;i<n;i++){
+        if(a[i]>a[i-1]) currLen++; //如果后一位比前一位大，则当前长度++
+        else currLen=1; //如果后一位<=前一位,那么相当于另外一个子串，重新计数
+        if(currLen>maxLen) maxLen = currLen; //打擂台
+    }
+
+    cout<<maxLen<<endl;
+    return 0;
+}
+
+《基于数据融合的项目进度管控设计与实现》的毕业设计--MeeoCollab喵协作
+用户角色与应用场景
+
+角色：均为普通用户，用户可以小组长身份成立小组，并邀请组员加入。
+场景：大学生课设/实验室项目，一般规模不大，但是需要一个简单易用的线上协作与进度管理工具。
+功能概览
+
+用户与权限管理：支持注册/登录（JWT 或 Session），后续可能添加邮箱注册。
+项目管理：用户以小组长身份创建项目并邀请组员加入，每个项目下可维护多个任务。
+任务管理：
+任务（Task）包含名称、描述、优先级、状态、开始/结束时间、负责人等。
+小组长可对任务进行分配、更新，组员可查看、领取、提交进度等。
+版本管理数据获取（Gitee 接入）：
+通过 Gitee API 或 WebHook 获取提交记录、提交信息、提交者等；
+
+提供 RESTful API 给前端调用（JSON 格式）。
+前端：Vue3
+使用 Vue Router 管理页面，Pinia / Vuex 管理应用状态。
+使用常用 UI 库（Element Plus、Ant Design Vue 等）+ ECharts 等可视化库展示数据。
+部署与运行：
+仅做课设演示，也可本地运行（后端和前端分离）。
